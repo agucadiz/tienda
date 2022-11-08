@@ -13,4 +13,5 @@ INSERT INTO articulos (codigo, descripcion, precio)
 VALUES ('2138972198', 'Yogurt piña', 200.50),
        ('4324324324', 'Bollicao', 50.10),
        ('3243243243', 'PC', 1001.10),
-       ('3444324113', 'ratón', 191.10);
+       ('3444324113', 'ratón', 191.10),
+       ('8574638478', 'teclado', 35.78);
