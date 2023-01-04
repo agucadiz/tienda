@@ -47,4 +47,13 @@ class Articulo extends Modelo
     {
         return $this->stock;
     }
+
+    public static function insertar($codigo, $descripcion, $precio, $stock, ?PDO $pdo = null)
+    {
+        $pdo = $pdo ?? conectar();
+
+        $sent = $pdo->prepare('INSERT INTO articulos (codigo, descripcion, precio, stock)
+                                    VALUES (:codigo, :descripcion, :precio, :stock)');
+        $sent->execute([':codigo' => $codigo, ':descripcion' => $descripcion, ':precio' => $precio, ':stock' => $stock]);
+    }
 }
