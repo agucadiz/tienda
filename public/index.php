@@ -29,7 +29,7 @@
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= hh($fila['descripcion']) ?></h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= hh($fila['descripcion']) ?></p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= hh(dinero($fila['precio'])) ?></p>
                         <!-- Mostrar existencias de cada artículo -->
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Existencias: <?= hh($fila['stock']) ?></p>
                         <!-- Botón carrito o sin existencias -->
