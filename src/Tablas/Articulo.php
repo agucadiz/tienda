@@ -56,4 +56,14 @@ class Articulo extends Modelo
                                     VALUES (:codigo, :descripcion, :precio, :stock)');
         $sent->execute([':codigo' => $codigo, ':descripcion' => $descripcion, ':precio' => $precio, ':stock' => $stock]);
     }
+
+    public static function modificar($id, $descripcion, $precio, $stock, ?PDO $pdo = null)
+    {
+        $pdo = $pdo ?? conectar();
+
+        $sent = $pdo->prepare("UPDATE articulos
+                                  SET descripcion = :descripcion, precio = :precio, stock = :stock
+                                WHERE id = :id");
+        $sent->execute([':id' => $id, ':descripcion' => $descripcion, ':precio' => $precio, ':stock' => $stock]);
+    }
 }
