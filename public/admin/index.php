@@ -36,7 +36,14 @@
     <div class="container mx-auto">
         <?php require '../../src/_menu.php' ?>
         <?php require '../../src/_alerts.php' ?>
+
         <div class="overflow-y-auto py-4 px-3">
+            <div class="ml-96 mt-10 mb-4">
+                <a href="usuarios.php">
+                    <button class="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900">Usuarios</button>
+                </a>
+            </div>
+
             <table class="mx-auto text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <th scope="col" class="py-3 px-6">Código</th>
