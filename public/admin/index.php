@@ -64,7 +64,7 @@
                                 <?php $fila_descripcion = hh($fila['descripcion']) ?>
                                 <?php $fila_precio = hh($fila['precio']) ?>
                                 <?php $fila_stock = hh($fila['stock']) ?>
-                                <a href="/admin/editar.php?id=<?= $fila_id ?>&descripcion=<?= $fila['descripcion'] ?>&precio=<?= $fila['precio'] ?>&stock=<?= $fila['stock'] ?>"><button class="focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900">
+                                <a href="/admin/editar.php?id=<?= $fila_id ?>&descripcion=<?= $fila['descripcion'] ?>&precio=<?= $fila['precio'] ?>&stock=<?= $fila['stock'] ?>"><button class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-400 font-medium rounded-lg text-sm px-4 py-2 mr-2 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:focus:ring-yellow-600">
                                         Editar</button></a>
                                 <form action="/admin/borrar.php" method="POST" class="inline">
                                     <input type="hidden" name="id" value="<?= $fila_id ?>">
