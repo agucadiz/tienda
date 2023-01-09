@@ -14,7 +14,6 @@ if (!isset($id)) {
 }
 
 // TODO: Validar id
-// Comprobar si el departamento tiene empleados
 
 $pdo = conectar();
 $sent = $pdo->prepare("DELETE FROM articulos WHERE id = :id");
