@@ -17,7 +17,7 @@
     $carrito = unserialize(carrito());
 
     $pdo = conectar();
-    $sent = $pdo->query("SELECT * FROM articulos ORDER BY codigo");
+    $sent = $pdo->query("SELECT * FROM articulos JOIN categorias ON articulos.categoria_id=categorias.id ORDER BY codigo");
     ?>
     <div class="container mx-auto">
         <?php require '../src/_menu.php' ?>
@@ -26,11 +26,14 @@
             <main class="flex-1 grid grid-cols-3 gap-4 justify-center justify-items-center">
                 <?php foreach ($sent as $fila) : ?>
                     <div class="p-6 max-w-xs min-w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <!-- Descripción del articulo -->
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= hh($fila['descripcion']) ?></h5>
                         </a>
                         <!-- Mostrar precio de cada artículo -->
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><?= hh(dinero($fila['precio'])) ?></p>
+                        <p class="mb-3 font-medium text-gray-700 dark:text-gray-400"><?= hh(dinero($fila['precio'])) ?></p>
+                        <!-- Mostrar categoría de cada artículo -->
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Categoría: <?= hh($fila['categoria']) ?></p>
                         <!-- Mostrar existencias de cada artículo -->
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Existencias: <?= hh($fila['stock']) ?></p>
                         <!-- Botón carrito o sin existencias -->
